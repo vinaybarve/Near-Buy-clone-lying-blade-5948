@@ -1,0 +1,22 @@
+.header{
+    display: flex;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.image_fix{
+    display: flex;
+    margin: 70px;
+    margin-left: 500px
+}
+.tata_icon{
+    width: 300px;
+    height: 200px;
+
+}
+.section-2{
+    display: grid;
+    justify-content: start;
+  
+}
+.main-cart-section{
+    padding: 20px;
+}
