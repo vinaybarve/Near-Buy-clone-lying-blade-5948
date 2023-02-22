@@ -15,8 +15,12 @@ restaurantRouter.get('/', async(req, res) => {
     if(req.query.location){
         query.location = req.query.location;
     }
+    if(req.query.min && req.query.max){
+        query = { rating: {$gte: req.query.min, $lte: req.query.max}};
+    }
     try{
-        const restaurants = await RestaurantModel.find(query);
+        const sortOrder = req.query.sort === 'desc' ? -1 : 1;
+        const restaurants = await RestaurantModel.find(query).sort({ price: sortOrder });
         res.send(restaurants);
     }
     catch(err){

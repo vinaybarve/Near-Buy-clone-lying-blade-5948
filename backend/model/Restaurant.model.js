@@ -8,7 +8,8 @@ const restaurantSchema = mongoose.Schema({
     phoneno: Number,
     location: String,
     // deals: String,
-    image: String
+    image: String,
+    active: Boolean
 })
 
 const RestaurantModel = mongoose.model('restaurant', restaurantSchema);
