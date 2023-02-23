@@ -27,7 +27,8 @@ const ProductItems = ({
           width={{ base: "10%", md: "15%" }}
           fontSize={{ base: "12px", md: "12px", lg: "md" }}
         >
-          <Text color={"white"}>{_id}</Text>
+          <Text >{_id}</Text>
+          {/* color={"white"} */}
         </Box>
         <Box
           width={{ base: "5%", md: "13%", lg: "10%" }}

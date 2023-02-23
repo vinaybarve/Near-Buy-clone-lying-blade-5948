@@ -111,14 +111,16 @@ const Products = () => {
 
   return (
     <Box
-      color={"white"}
+      color={"Black"}
       minH={"100vh"}
       mt={{ base: "60px", md: "0px" }}
       padding={"20px"}
-      bg={"#0c0e1f"}
+      bg={"#5A5A5A"}
+      // bg={"#0c0e1f"}
     >
-      <Heading as={"h5"} color={"#00b5b8"}>Products</Heading>
-      <Text color={"#00b5b8"}>List of Products</Text>
+      <Heading as={"h5"} >Products</Heading>
+      {/* color={"#00b5b8"} */}
+      <Text >List of Products</Text>
       <Box display={"flex"} justifyContent={"space-between"} mb={"20px"}>
           {/* input search */}
           <Input
@@ -126,33 +128,37 @@ const Products = () => {
             placeholder="Search Listings.."
             w={{ base: "40%", md: "35%", lg: "25%" }}
             onKeyDown={handleKeyDown}
+            bg="white"
           ></Input>
           {/* Sorting by Price */}
-          <Box display={"flex"} justifyContent={"space-around"} mb={"20px"}>
+          <Box display={"flex"} justifyContent={"space-around"} mb={"20px"} w={"35%"}>
             <Select
-              bg="#0c0e1f"
-              w={{ base: "80%", md: "75%", lg: "65%" }}
+              // bg="#0c0e1f"
+              bg="white"
+              w={{ base: "80%", md: "75%", lg: "35%" }}
               cursor={"pointer"}
               onChange={(e) => setSort(e.target.value)}
             >
-              <option style={{ backgroundColor: "#0c0e1f" }} value="asc">
-                Sort by: Low to High
+              <option value="asc">
+              {/* style={{ backgroundColor: "#0c0e1f" }} */}
+                Low to High
               </option>
-              <option style={{ backgroundColor: "#0c0e1f" }} value="desc">
-                Sort by: High to Low
+              <option value="desc">
+                High to Low
               </option>
             </Select>
             {/* select option */}
             <Select
-              bg="#0c0e1f"
-              w={{ base: "85%", md: "75%", lg: "65%" }}
+              // bg="#0c0e1f"
+              bg="white"
+              w={{ base: "85%", md: "75%", lg: "35%" }}
               cursor={"pointer"}
               // onChange={(e) => setCategory(e.target.value)}
             >
-              <option style={{ backgroundColor: "#0c0e1f" }} value="restaurant">
+              <option value="restaurant">
                 Restaurants
               </option>
-              <option style={{ backgroundColor: "#0c0e1f" }} value="giftcard">
+              <option value="giftcard">
                 Gift Card
               </option>
             </Select>
@@ -231,7 +237,8 @@ const Products = () => {
         size={{ base: "sm", md: "md" }}
       >
         <ModalOverlay />
-        <ModalContent bg={"#0c0e1f"} color={"white"}>
+        <ModalContent color={"white"} bg={"#5A5A5A"}>
+        {/* bg={"#0c0e1f"}  */}
           <ModalHeader>Edit Listing</ModalHeader>
           <ModalCloseButton />
           <ModalBody pb={6} textAlign={"center"}>
