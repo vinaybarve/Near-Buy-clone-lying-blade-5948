@@ -34,6 +34,7 @@ function ProductCard({ product }) {
       <Box
         bg={useColorModeValue("white", "gray.800")}
         maxW="250px"
+        h={"250px"}
         borderWidth="1px"
         rounded="lg"
         shadow="lg"
