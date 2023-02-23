@@ -5,6 +5,7 @@ import Login from "./Login";
 import Products from "./Products";
 import Signup from "./Signup";
 import SingleProduct from "./SingleProduct";
+import Admin from "./Admin";
 
 export default function MainRoutes() {
   return (
@@ -14,6 +15,7 @@ export default function MainRoutes() {
       <Route path="/products/:id/edit" element={<EditProduct />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
+      <Route path="/admin" element={<Admin />} />
       <Route path="*" element={<h3>Page Not Found</h3>} />
     </Routes>
   );
