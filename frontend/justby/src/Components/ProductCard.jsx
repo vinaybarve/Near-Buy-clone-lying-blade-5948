@@ -116,7 +116,7 @@ function ProductCard({ product }) {
         </Box>
       </Box>
     </Flex>
-  );
+  )
 }
 
-export default ProductCard;
+export default ProductCard
