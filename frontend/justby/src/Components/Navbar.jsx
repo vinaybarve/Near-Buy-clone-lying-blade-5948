@@ -130,7 +130,7 @@ export default function Navbar() {
             <Input
               placeholder="Search restaurants,spa,events"
               width={{
-                sm: "150px",
+                sm: "100px",
                 md: "200px",
                 lg: "500px",
               }}

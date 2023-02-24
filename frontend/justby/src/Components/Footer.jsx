@@ -52,20 +52,28 @@ const SocialButton = ({ children, label, href }) => {
 
 export default function Footer() {
   return (
-    <Grid>
-      <Grid
-        templateColumns={{
-          sm: "1fr ",
-          md: "1fr",
-          lg: "1fr 1fr",
-        }}
-        alignItems="center"
-        justifyContent="center"
-        bg="#333333"
-        h="200px"
-      >
-        <GridItem h="200px" w="1190px">
-          <Text m="50px 0px 10px 170px" fontSize="14px" color="#F2F2F2">
+    <Flex flexDirection="column">
+      <Flex alignItems="center" justifyContent="center" bg="#333333">
+        <GridItem
+          h={{
+            sm: "200px",
+            md: "200px",
+            lg: "210px",
+          }}
+          w="1000px"
+        >
+          <Text
+            m={{
+              lg: "50px 0px 10px 0px",
+              sm: "15px 0px 0px 23px",
+            }}
+            fontSize={{
+              sm: "10px",
+              md: "12px",
+              lg: "12px",
+            }}
+            color="#F2F2F2"
+          >
             Amazing offers available on nearbuy nearbuy helps you discover the
             best things to do, eat and buy – wherever you are! Make every day
             awesome with nearbuy. Dine at the finest restaurants, relax at the
@@ -81,15 +89,14 @@ export default function Footer() {
           </Text>
         </GridItem>
         <Grid
-          ml="60px"
-          mt="-50px"
-          w="40%"
+          ml="20px"
+          mt="-70px"
+          w="10%"
           templateColumns={{
             sm: "1fr ",
             md: "1fr",
             lg: "1fr 1fr 1fr",
           }}
-          gap="5px"
         >
           <SocialButton label={"Twitter"} href={"#"}>
             <FaTwitter color="white" fontSize="24px" />
@@ -101,7 +108,7 @@ export default function Footer() {
             <FaInstagram color="white" fontSize="25px" />
           </SocialButton>
         </Grid>
-      </Grid>
+      </Flex>
       <Grid
         bg="black"
         color="#FFFFFF"
@@ -137,7 +144,7 @@ export default function Footer() {
 
             <Stack align={"flex-start"}>
               <ListHeader>Install App</ListHeader>
-              <Flex gap="30px">
+              <Grid gap="20px">
                 <Image
                   src="https://res4.nbstatic.in/static/images/google-play-badges.svg"
                   w="120px"
@@ -146,11 +153,11 @@ export default function Footer() {
                   src="https://res4.nbstatic.in/static/images/app-store.svg"
                   w="120px"
                 />
-              </Flex>
+              </Grid>
             </Stack>
           </SimpleGrid>
         </Container>
       </Grid>
-    </Grid>
+    </Flex>
   )
 }
