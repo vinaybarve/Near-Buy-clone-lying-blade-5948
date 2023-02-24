@@ -52,7 +52,7 @@ const SocialButton = ({ children, label, href }) => {
 
 export default function Footer() {
   return (
-    <Grid mt="147px" w="100%" bg="black">
+    <Grid>
       <Grid
         templateColumns={{
           sm: "1fr ",
@@ -108,7 +108,7 @@ export default function Footer() {
         h={{
           sm: "439px",
           md: "350px",
-          lg: "245px",
+          lg: "265px",
         }}
       >
         <Container maxW={"8xl"} py={10}>
