@@ -10,16 +10,7 @@ import {
   Tooltip,
 } from "@chakra-ui/react";
 import { FiShoppingCart } from "react-icons/fi";
-
-const data = {
-  isNew: true,
-  imageURL:
-    "https://images.unsplash.com/photo-1572635196237-14b3f281503f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=4600&q=80",
-  name: "Wayfarer Classic",
-  price: 4.5,
-  rating: 4.2,
-  numReviews: 34,
-};
+import { BsStarFill, BsStarHalf } from "react-icons/bs";
 
 function ProductCard({ product }) {
   return (
@@ -33,14 +24,14 @@ function ProductCard({ product }) {
     >
       <Box
         bg={useColorModeValue("white", "gray.800")}
-        maxW="250px"
-        h={"250px"}
+        maxW="300px"
+        h={"350px"}
         borderWidth="1px"
         rounded="lg"
         shadow="lg"
         position="relative"
       >
-        {data.isNew && (
+        {product.active && (
           <Circle
             size="10px"
             position="absolute"
@@ -54,14 +45,14 @@ function ProductCard({ product }) {
           margin={"auto"}
           src={product.image}
           padding={2}
-          width={"30%"}
-          alt={`Picture of ${data.name}`}
+          width={"100%"}
+          alt={`Picture of ${product.name}`}
           roundedTop="lg"
         />
 
         <Box p="8">
           <Box d="flex" alignItems="baseline">
-            {data.isNew && (
+            {product.active && (
               <Badge rounded="full" px="2" fontSize="0.8em" colorScheme="red">
                 New Arrival
               </Badge>
@@ -72,12 +63,13 @@ function ProductCard({ product }) {
               fontSize="md"
               fontWeight="semibold"
               as="h5"
+              margin={"auto"}
               lineHeight="tight"
               isTruncated
             >
-              {product.title}
+              {product.name}
             </Box>
-            <Tooltip
+            {/* <Tooltip
               label="Add to cart"
               bg="white"
               placement={"top"}
@@ -87,15 +79,39 @@ function ProductCard({ product }) {
               <chakra.a href={"#"} display={"flex"}>
                 <Icon as={FiShoppingCart} h={6} w={5} alignSelf={"center"} />
               </chakra.a>
-            </Tooltip>
+            </Tooltip> */}
           </Flex>
+          <Box
+            fontSize="md"
+            fontWeight="semibold"
+            as="h5"
+            lineHeight="tight"
+            isTruncated
+          >
+            {product.location}
+          </Box>
           <Flex justifyContent="space-between" alignContent="center">
             <Box fontSize="xl" color={useColorModeValue("gray.800", "white")}>
               <Box as="span" color={"gray.600"} fontSize="lg">
-                £
+                ₹
               </Box>
               {product.price.toFixed(2)}
             </Box>
+            <Flex
+              d="flex"
+              flexDirection={"row"}
+              alignItems="center"
+              alignContent="center"
+            >
+              <BsStarFill color={"teal.500"} />
+              <BsStarFill color={"teal.500"} />
+              <BsStarFill color={"teal.500"} />
+              <BsStarHalf color={"teal.500"} />
+
+              <Box as="span" ml="2" color="gray.600" fontSize="sm">
+                {product.rating} review{6 > 1 && "s"}
+              </Box>
+            </Flex>
           </Flex>
         </Box>
       </Box>

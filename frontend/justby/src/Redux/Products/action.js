@@ -17,11 +17,11 @@ const getProductFailureAction = () => {
   return { type: GET_PRODUCTS_FAILURE };
 };
 
-export const getProducts = (dispatch) => {
+export const getProducts = (param) => (dispatch) => {
   dispatch(getProductRequestAction());
 
   axios
-    .get("https://fakestoreapi.com/products") //--------------------------API------------->
+    .get("http://localhost:8080/restaurant/", param) //--------------------------API------------->
     .then((res) => {
       console.log(res);
       dispatch(getProductSuccessAction(res.data));
