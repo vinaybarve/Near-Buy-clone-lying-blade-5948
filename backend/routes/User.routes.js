@@ -6,8 +6,16 @@ const bcrypt=require("bcrypt");
 const userRouter=express.Router();
 
 
-userRouter.get("/" , (req, res)=>{
-    res.send("user data");
+userRouter.get("/" , async(req, res)=>{
+    const query = req.query
+    try{
+        const user= await UserModel.find() 
+        res.send(user);
+        console.log("all user data")
+    }catch(err){
+        console.log(err);
+    }
+ 
 })
 
 
