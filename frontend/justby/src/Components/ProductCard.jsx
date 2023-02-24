@@ -8,8 +8,8 @@ import {
   Icon,
   chakra,
   Tooltip,
-} from "@chakra-ui/react";
-import { FiShoppingCart } from "react-icons/fi";
+} from "@chakra-ui/react"
+import { FiShoppingCart } from "react-icons/fi"
 
 const data = {
   isNew: true,
@@ -19,7 +19,7 @@ const data = {
   price: 4.5,
   rating: 4.2,
   numReviews: 34,
-};
+}
 
 function ProductCard({ product }) {
   return (
@@ -100,7 +100,7 @@ function ProductCard({ product }) {
         </Box>
       </Box>
     </Flex>
-  );
+  )
 }
 
-export default ProductCard;
+export default ProductCard
