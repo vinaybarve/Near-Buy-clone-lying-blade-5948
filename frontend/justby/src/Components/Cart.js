@@ -1,31 +1,50 @@
-import React from 'react'
-import "./cart.css"
+import React, { useState, useEffect } from "react";
+import "../styles/cart.css";
 
-const Cart = () => {
+const Cart = ({ cart, setCart, handleChange }) => {
+  const [price, setPrice] = useState(0);
+
+  const handleRemove = (id) => {
+    const arr = cart.filter((item) => item.id !== id);
+    setCart(arr);
+    handlePrice();
+  };
+
+  const handlePrice = () => {
+    let ans = 0;
+    cart.map((item) => (ans += item.amount * item.price));
+    setPrice(ans);
+  };
+
+  useEffect(() => {
+    handlePrice();
+  });
+
   return (
-    <>
-    
-      <div className='header'>
-        <div>
-            <p>ENTERTAINMENT</p>
-            <h1>Tata Play</h1>
-            <p>online deal</p>
+    <article>
+      {cart.map((item) => (
+        <div className="cart_box" key={item.id}>
+          <div className="cart_img">
+            <img src={item.img} alt="" />
+            <p>{item.title}</p>
+          </div>
+          <div>
+            <button onClick={() => handleChange(item, 1)}>+</button>
+            <button>{item.amount}</button>
+            <button onClick={() => handleChange(item, -1)}>-</button>
+          </div>
+          <div>
+            <span>{item.price}</span>
+            <button onClick={() => handleRemove(item.id)}>Remove</button>
+          </div>
         </div>
-        <div className='image_fix'>
-        <div>
-        <img src='https://img4.nbstatic.in/tr:w-500/61f3ec4b1e2731000bdc591c.jpg' alt='tala_play' className='tata_icon'/>
-        </div>
-        <div>
-        <img src='https://img4.nbstatic.in/tr:w-500/61f3ec271e2731000bdc591b.jpg' alt='tala_play' className='tata_icon'/>
-
-        </div>
-        </div>
+      ))}
+      <div className="total">
+        <span>Total Price of your Cart</span>
+        <span>Rs - {price}</span>
       </div>
-      <section>
-        <h1>cart page</h1>
-      </section>
-    </>
-  )
-}
+    </article>
+  );
+};
 
-export default Cart
+export default Cart;
