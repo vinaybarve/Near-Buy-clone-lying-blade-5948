@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { FiShoppingCart } from "react-icons/fi";
 import { BsStarFill, BsStarHalf } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function ProductCard({ product }) {
   return (
@@ -40,16 +41,16 @@ function ProductCard({ product }) {
             bg="red.200"
           />
         )}
-
-        <Image
-          margin={"auto"}
-          src={product.image}
-          padding={2}
-          width={"100%"}
-          alt={`Picture of ${product.name}`}
-          roundedTop="lg"
-        />
-
+        <Link to={`/products/${product._id}`}>
+          <Image
+            margin={"auto"}
+            src={product.image}
+            padding={2}
+            width={"100%"}
+            alt={`Picture of ${product.name}`}
+            roundedTop="lg"
+          />
+        </Link>
         <Box p="8">
           <Box d="flex" alignItems="baseline">
             {product.active && (

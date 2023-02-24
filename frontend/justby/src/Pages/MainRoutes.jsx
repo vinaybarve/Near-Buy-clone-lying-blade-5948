@@ -6,11 +6,20 @@ import Products from "./Products";
 import Signup from "./Signup";
 import SingleProduct from "./SingleProduct";
 import Admin from "./Admin";
+// import PrivateRoute from "../Components/PrivateRoute";
 
 export default function MainRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Products />} />
+      {/* <Route
+        path="/products/:id"
+        element={
+          <PrivateRoute>
+            <SingleProduct />
+          </PrivateRoute>
+        }
+      /> */}
       <Route path="/products/:id" element={<SingleProduct />} />
       <Route path="/products/:id/edit" element={<EditProduct />} />
       <Route path="/login" element={<Login />} />
