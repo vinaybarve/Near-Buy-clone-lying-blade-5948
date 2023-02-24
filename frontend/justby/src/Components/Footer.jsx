@@ -144,7 +144,7 @@ export default function Footer() {
 
             <Stack align={"flex-start"}>
               <ListHeader>Install App</ListHeader>
-              <Flex gap="30px">
+              <Grid gap="20px">
                 <Image
                   src="https://res4.nbstatic.in/static/images/google-play-badges.svg"
                   w="120px"
@@ -153,7 +153,7 @@ export default function Footer() {
                   src="https://res4.nbstatic.in/static/images/app-store.svg"
                   w="120px"
                 />
-              </Flex>
+              </Grid>
             </Stack>
           </SimpleGrid>
         </Container>
