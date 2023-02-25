@@ -140,7 +140,16 @@ export default function Navbar() {
               }}
             />
           </InputGroup>
-          <Button colorScheme="red" size="lg" borderRadius="0px" h="40px">
+          <Button
+            fontSize={{
+              lg: "13px",
+              md: "10px",
+              sm: "9px",
+            }}
+            colorScheme="red"
+            borderRadius="0px"
+            h="40px"
+          >
             Search
           </Button>
         </Flex>
