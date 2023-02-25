@@ -12,7 +12,9 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
+
 import { useState } from "react";
+
 
 export default function Login() {
 const [email, setEmail]=useState("");
@@ -80,9 +82,14 @@ const handleSubmit=()=>{
                 _hover={{
                   bg: "red.500",
                 }}
+
+              >
+                Sign in
+
                 onClick={handleSubmit}
               >
                 Proceed
+
               </Button>
             </Stack>
           </Stack>

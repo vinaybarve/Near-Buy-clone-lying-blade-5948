@@ -79,9 +79,9 @@ export default function Navbar() {
 
         <Grid
           templateColumns={{
-            lg: "repeat(4,1fr)",
+            lg: "repeat(5,1fr)",
           }}
-          w="70%"
+          w="90%"
           ml="80px"
           display={{ base: "none", sm: "none", md: "none", lg: "grid" }}
         >
@@ -89,6 +89,7 @@ export default function Navbar() {
           <Link>How it Works</Link>
           <Link>List your Bussiness</Link>
           <Link to={"/login"}>Login</Link>
+          <Link to={"/adminlogin"}>Admin</Link>
         </Grid>
       </Grid>
       <Grid
