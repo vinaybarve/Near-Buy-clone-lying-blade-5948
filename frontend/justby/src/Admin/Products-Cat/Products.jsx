@@ -2,6 +2,7 @@ import { Avatar, Box, Button, Heading, Input, Modal, ModalBody, ModalCloseButton
 import React, { useEffect, useState } from 'react'
 import axios from "axios";
 import ProductItems from './ProductItems';
+import BackendURL from '../../Backend';
 
 const Products = () => {
   const toast = useToast();
@@ -25,7 +26,7 @@ const Products = () => {
     }
   };
   const searchTheData = async (searchedData) => {
-    let res = await axios.get(`http://localhost:8080/restaurant`);
+    let res = await axios.get(`${BackendURL}/restaurant`);
     let data = await res.data;
     data = data.filter((el) => {
       return el.name.match(searchedData);
@@ -39,7 +40,7 @@ const Products = () => {
     // axios.patch(`http://localhost:8080/restaurant/update/${_id}`, {
     //   active: !active
     // })
-    fetch(`http://localhost:8080/restaurant/update/${_id}`,{
+    fetch(`${BackendURL}/restaurant/update/${_id}`,{
       method: "PATCH",
       body: JSON.stringify({
         active: !active
@@ -77,7 +78,7 @@ const Products = () => {
   }
 
   const handleGetData = () => {
-    axios.get(`http://localhost:8080/restaurant/?sort=${sort}`)
+    axios.get(`${BackendURL}/restaurant/?sort=${sort}`)
     .then((res)=>{
       setDatas(res.data)
       // console.log(res.data)
@@ -97,7 +98,7 @@ const Products = () => {
       image: image
     };
 
-    axios.patch(`http://localhost:8080/restaurant/update/${mid}`, dataToSend)
+    axios.patch(`${BackendURL}/restaurant/update/${mid}`, dataToSend)
     .then((res)=> {
       handleGetData();
       console.log(res);
