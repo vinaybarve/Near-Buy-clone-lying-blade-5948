@@ -4,13 +4,14 @@ require('dotenv').config();
 const cors = require('cors');
 const {userRouter} = require('./routes/User.routes')
 const {restaurantRouter} = require('./routes/Restaurant.routes')
-
+const {adminRouter} = require('./routes/Admin.routes')
 
 const app = express();
 app.use(express.json());
 app.use(cors())
 app.use("/user", userRouter)
 
+app.use('/admin', adminRouter);
 // app.use(cors());
 
 app.use('/restaurant', restaurantRouter);
