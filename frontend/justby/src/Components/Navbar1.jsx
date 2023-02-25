@@ -1,7 +1,7 @@
 import React from "react";
 import "../Styles/navbar.css";
 import "../Styles/header.css";
-const Navbar = ({ setShow, size }) => {
+const Navbar1 = ({ setShow, size }) => {
   return (
     <nav>
       <header>
@@ -46,4 +46,4 @@ const Navbar = ({ setShow, size }) => {
   );
 };
 
-export default Navbar;
+export default Navbar1;

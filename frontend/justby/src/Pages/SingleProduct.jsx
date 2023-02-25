@@ -21,7 +21,7 @@ import axios from "axios";
 
 import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { MdLocalShipping } from "react-icons/md";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 export default function SingleProduct() {
   const { id } = useParams();
@@ -148,7 +148,7 @@ export default function SingleProduct() {
               </List>
             </Box>
           </Stack>
-
+            <Link >
           <Button
             rounded={"none"}
             w={"full"}
@@ -165,6 +165,7 @@ export default function SingleProduct() {
           >
             Add to cart
           </Button>
+          </Link>
 
           <Stack direction="row" alignItems="center" justifyContent={"center"}>
             <MdLocalShipping />

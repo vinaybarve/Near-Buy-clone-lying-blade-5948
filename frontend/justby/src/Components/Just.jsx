@@ -3,7 +3,7 @@ import list from "../data";
 import Cards from "./Card";
 import "../Styles/justby.css";
 
-const Justby = ({ handleClick }) => {
+const Just = ({ handleClick }) => {
   return (
     <section>
       {list.map((item) => (
@@ -13,4 +13,4 @@ const Justby = ({ handleClick }) => {
   );
 };
 
-export default Justby;
+export default Just;

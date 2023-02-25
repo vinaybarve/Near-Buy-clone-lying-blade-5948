@@ -6,7 +6,7 @@ function Product0() {
     <Flex h="130px" border="1px solid rgba(0, 0, 0, 0.116)">
       <Flex w="100%" justifyContent="center">
         <Box _hover={{ bg: "#F1F1F1" }} h="100%" w="140px">
-          <Link>
+          <Link to={"/products"}>
             <Image
               p={{
                 sm: "30px 0px",
@@ -21,7 +21,7 @@ function Product0() {
             <Text fonts={"sans-serif"} fontSize="12px" fontWeight="bold">
               Restaurant Deals
             </Text>
-          </Link>
+          </Link >
         </Box>
 
         <Box _hover={{ bg: "#F1F1F1", color: "black" }} h="100%" w="140px">
@@ -120,7 +120,7 @@ function Product0() {
         </Box>
 
         <Box _hover={{ bg: "#F1F1F1", color: "black" }} h="100%" w="140px">
-          <Link>
+          <Link to={"/gift"}>
             <Image
               p={{
                 sm: "30px 0px",

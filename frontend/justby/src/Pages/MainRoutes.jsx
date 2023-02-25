@@ -20,6 +20,7 @@ import Dashboard from "../Pages/Dashboard";
 import AdminLogin from "./AdminLogin";
 
 import { Gift } from "../Components/Gift";
+import CartPage from "./CartPage";
 
 export default function MainRoutes() {
   return (
@@ -44,6 +45,8 @@ export default function MainRoutes() {
       <Route path="/adminlogin" element={<AdminLogin />} />
       <Route path="/admin" element={<Admin />} />
       <Route path="*" element={<h3>Page Not Found</h3>} />
+      <Route path="/Cartpage" element={<CartPage/>} />
+
     </Routes>
   );
 }
