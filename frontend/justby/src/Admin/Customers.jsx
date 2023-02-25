@@ -17,6 +17,7 @@ import {
 } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import  BackendURL  from "../Backend";
 
 const Customers = () => {
   const [customerData, setCustomerData] = useState([]);
@@ -31,7 +32,8 @@ const Customers = () => {
   // fetch user data
   const handleGetUserData = () => {
     axios
-      .get(`http://localhost:8080/user`)
+      // .get(`http://localhost:8080/user`)
+      .get(`${BackendURL}/user`)
       .then((res) => {
         // console.log(res.data);
         setCustomerData(res.data)
@@ -48,7 +50,7 @@ const Customers = () => {
     }
   };
   const searchTheData = async (searchedData, e) => {
-    let res = await axios.get(`http://localhost:8080/user`);
+    let res = await axios.get(`${BackendURL}/user`);
     let data = await res.data;
     data = data.filter((el) => {
       return (
@@ -80,7 +82,7 @@ const Customers = () => {
       Password: pass,
     };
     axios
-      .patch(`http://localhost:8080/user/update/${mid}`, dataToSend)
+      .patch(`${BackendURL}/user/update/${mid}`, dataToSend)
       .then((res) => {
         handleGetUserData();
         toast({
