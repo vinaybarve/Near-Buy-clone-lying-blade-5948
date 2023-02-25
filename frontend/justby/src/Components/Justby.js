@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import list from "../data";
 import Cards from "./Card";
-import "../styles/justby.css";
+import "../Styles/justby.css";
 
 const Justby = ({ handleClick }) => {
   return (
