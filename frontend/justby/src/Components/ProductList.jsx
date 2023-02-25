@@ -8,7 +8,7 @@ import { useSearchParams } from "react-router-dom";
 
 export default function ProductList() {
   const dispatch = useDispatch();
-  const products = useSelector((store) => store.products);
+  const products = useSelector((store) => store.productReducer.products);
   const location = useLocation();
   const [searchParams] = useSearchParams();
   console.log(location);
