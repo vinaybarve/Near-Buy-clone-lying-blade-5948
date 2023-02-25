@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "react-router-dom"
 import {
   Grid,
-  GridItem,
   Image,
   Text,
   Select,
@@ -121,7 +120,12 @@ export default function Navbar() {
           h="70px"
           src="https://www.nearbuy.com/static/images/nearbuy_red_with_subtitle.svg"
         />
-        <Flex w="79%">
+        <Flex
+          w={{
+            sm: "100px",
+            lg: "79%",
+          }}
+        >
           <InputGroup>
             <InputLeftElement
               children={<SearchIcon color="gray.500" fontSize="0.7em" />}
