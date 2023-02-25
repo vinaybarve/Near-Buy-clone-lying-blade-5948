@@ -36,8 +36,17 @@ const Products = () => {
 
 
   const handleToggleStatus = (_id, active) => {
-    axios.patch(`http://localhost:8080/restaurant/update/${_id}`, {
-      active: !active
+    // axios.patch(`http://localhost:8080/restaurant/update/${_id}`, {
+    //   active: !active
+    // })
+    fetch(`http://localhost:8080/restaurant/update/${_id}`,{
+      method: "PATCH",
+      body: JSON.stringify({
+        active: !active
+      }),
+      headers:{
+        "Content-Type": "application/json"
+      }
     })
     .then((res)=>{
       handleGetData();
@@ -115,23 +124,25 @@ const Products = () => {
       minH={"100vh"}
       mt={{ base: "60px", md: "0px" }}
       padding={"20px"}
-      bg={"#5A5A5A"}
+      bg={"white"}
+      // bg={"#f0fdf4"}
+      // bg={"#5A5A5A"}
       // bg={"#0c0e1f"}
     >
-      <Heading as={"h5"} >Products</Heading>
+      <Heading as={"h5"} fontSize="2xl">Products</Heading>
       {/* color={"#00b5b8"} */}
       <Text >List of Products</Text>
-      <Box display={"flex"} justifyContent={"space-between"} mb={"20px"}>
+      <Box display={["block","flex"]} justifyContent={"space-between"} mb={"20px"} >
           {/* input search */}
           <Input
             type={"text"}
             placeholder="Search Listings.."
-            w={{ base: "40%", md: "35%", lg: "25%" }}
+            w={{ base: "70%", md: "45%", lg: "25%" }}
             onKeyDown={handleKeyDown}
             bg="white"
           ></Input>
           {/* Sorting by Price */}
-          <Box display={"flex"} justifyContent={"space-around"} mb={"20px"} w={"35%"}>
+          <Box display={"flex"} justifyContent={"space-around"} mb={"20px"} w={["100%","35%"]}>
             <Select
               // bg="#0c0e1f"
               bg="white"
@@ -171,7 +182,8 @@ const Products = () => {
               justifyContent={"space-between"}
               alignItems={"center"}
               textAlign={"left"}
-              boxShadow="rgba(0, 0, 0, 0.4) 0px 1px 4px, rgba(0, 0, 0, 0.3) 0px 5px 10px -1px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset"
+              boxShadow="rgba(0, 0, 0, 0.4) 0px 1px 2px, rgba(0, 0, 0, 0.3) 0px 3px 2px -1px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset"
+              // boxShadow="rgba(0, 0, 0, 0.4) 0px 1px 4px, rgba(0, 0, 0, 0.3) 0px 5px 10px -1px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset"
               padding={"10px"}
               mt={"20px"}
             >
@@ -237,8 +249,8 @@ const Products = () => {
         size={{ base: "sm", md: "md" }}
       >
         <ModalOverlay />
-        <ModalContent color={"white"} bg={"#5A5A5A"}>
-        {/* bg={"#0c0e1f"}  */}
+        <ModalContent >
+        {/* bg={"#0c0e1f"} bg={"#5A5A5A"} color={"white"}  bg={"#aeceed"} */}
           <ModalHeader>Edit Listing</ModalHeader>
           <ModalCloseButton />
           <ModalBody pb={6} textAlign={"center"}>

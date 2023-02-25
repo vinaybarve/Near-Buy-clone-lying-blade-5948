@@ -18,6 +18,20 @@ userRouter.get("/" , async(req, res)=>{
  
 })
 
+// userRouter.patch('/update/:id', async(req, res) => {
+//     const ID = req.params.id;
+
+//     const payload = req.body;
+//     try{
+//         const user = await UserModel.findByIdAndUpdate({_id: ID}, payload);
+//         res.send(user);
+//         res.send({"MSG": "updated"});
+//     }
+//     catch(err){
+//         res.status(400).send(err);
+//     }
+// });
+
 
 userRouter.post("/register" , async(req, res)=>{
     const {name, email, password ,city}=req.body
