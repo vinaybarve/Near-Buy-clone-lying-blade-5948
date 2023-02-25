@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import list from "../data";
-import Cards from "./Card";
-import "../styles/justby.css";
+import React, { useState } from "react"
+import list from "../data"
+import Cards from "./Card"
+import "../Styles/cart.css"
 
 const Justby = ({ handleClick }) => {
   return (
@@ -10,7 +10,7 @@ const Justby = ({ handleClick }) => {
         <Cards key={item.id} item={item} handleClick={handleClick} />
       ))}
     </section>
-  );
-};
+  )
+}
 
-export default Justby;
+export default Justby
