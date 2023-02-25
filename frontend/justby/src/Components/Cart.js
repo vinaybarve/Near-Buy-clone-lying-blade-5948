@@ -2,23 +2,23 @@ import React, { useState, useEffect } from "react";
 import "../Styles/cart.css";
 
 const Cart = ({ cart, setCart, handleChange }) => {
-  const [price, setPrice] = useState(0);
+  const [price, setPrice] = useState(0)
 
   const handleRemove = (id) => {
-    const arr = cart.filter((item) => item.id !== id);
-    setCart(arr);
-    handlePrice();
-  };
+    const arr = cart.filter((item) => item.id !== id)
+    setCart(arr)
+    handlePrice()
+  }
 
   const handlePrice = () => {
-    let ans = 0;
-    cart.map((item) => (ans += item.amount * item.price));
-    setPrice(ans);
-  };
+    let ans = 0
+    cart.map((item) => (ans += item.amount * item.price))
+    setPrice(ans)
+  }
 
   useEffect(() => {
-    handlePrice();
-  });
+    handlePrice()
+  })
 
   return (
     <article>
@@ -44,7 +44,11 @@ const Cart = ({ cart, setCart, handleChange }) => {
         <span>Rs - {price}</span>
       </div>
     </article>
-  );
-};
+  )
+}
 
+<<<<<<< HEAD
+export default Cart
+=======
 export default Cart;
+>>>>>>> 37bd41205b54b1af5e4f170b78d50da778a17e21
