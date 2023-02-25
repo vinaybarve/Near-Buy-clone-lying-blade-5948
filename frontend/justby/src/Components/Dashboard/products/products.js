@@ -40,3 +40,9 @@ export const product3 = [
   { img: "https://img4.nbstatic.in/tr:w-350/636b9da622156b000b884684.jpg" },
   { img: "https://img4.nbstatic.in/tr:w-350/636b9db122156b000b884685.jpg" },
 ]
+
+export const product4 = [
+  { img: "https://img4.nbstatic.in/tr:w-2800/627b4e163b031b000b774d60.jpg" },
+  { img: "https://img4.nbstatic.in/tr:w-2800/627b4e2ab3c621000b5f5e78.jpg" },
+  { img: "https://img4.nbstatic.in/tr:w-2800/627b4e163b031b000b774d60.jpg" },
+]
