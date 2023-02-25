@@ -36,9 +36,11 @@ import {
           "Content-Type": "application/json"
         }
       }).then((res)=>res.json())
-      .then((res)=>console.log(res))
-      .catch((err)=>console.log(err))
+      .then((res)=>{alert(res.msg);
+         window.location.href=res.url})
+      .catch((err)=>alert(err))
     }
+
 
     return (
       <Flex
