@@ -7,7 +7,11 @@ import Signup from "./Signup"
 import SingleProduct from "./SingleProduct"
 import Dashboard from "../Pages/Dashboard"
 import Admin from "./Admin"
+
 import AdminLogin from "./AdminLogin"
+
+import { Gift } from "../Components/Gift"
+
 export default function MainRoutes() {
   return (
     <Routes>
@@ -15,6 +19,7 @@ export default function MainRoutes() {
       <Route path="/products" element={<Products />} />
       <Route path="/products/:id" element={<SingleProduct />} />
       <Route path="/products/:id/edit" element={<EditProduct />} />
+      <Route path="/gift" element={<Gift/>} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/adminlogin" element={<AdminLogin />} />
