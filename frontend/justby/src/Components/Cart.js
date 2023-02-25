@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react"
-import "../Styles/cart.css"
+import React, { useState, useEffect } from "react";
+import "../Styles/cart.css";
+
 const Cart = ({ cart, setCart, handleChange }) => {
   const [price, setPrice] = useState(0)
 
@@ -46,4 +47,8 @@ const Cart = ({ cart, setCart, handleChange }) => {
   )
 }
 
+<<<<<<< HEAD
 export default Cart
+=======
+export default Cart;
+>>>>>>> 37bd41205b54b1af5e4f170b78d50da778a17e21

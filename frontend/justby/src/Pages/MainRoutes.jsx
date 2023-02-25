@@ -5,8 +5,8 @@ import Login from "./Login"
 import Products from "./Products"
 import Signup from "./Signup"
 import SingleProduct from "./SingleProduct"
-import Dashboard from "../Pages/Dashboard"
 import Admin from "./Admin"
+import Dashboard from "../Pages/Dashboard"
 
 import AdminLogin from "./AdminLogin"
 
@@ -15,7 +15,7 @@ import { Gift } from "../Components/Gift"
 export default function MainRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<Products />} />
+      {/* <Route path="/" element={<Products />} /> */}
       {/* <Route
         path="/products/:id"
         element={
@@ -24,7 +24,6 @@ export default function MainRoutes() {
           </PrivateRoute>
         }
       /> */}
-
       <Route path="/" element={<Dashboard />} />
       <Route path="/products" element={<Products />} />
       <Route path="/products/:id" element={<SingleProduct />} />
