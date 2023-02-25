@@ -20,6 +20,7 @@ export default function Navbar() {
       <Grid
         templateColumns={{
           sm: "1fr ",
+          md: "1fr",
           lg: "1fr 1fr",
         }}
         w="100%"
