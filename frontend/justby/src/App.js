@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import Justby from "./Components/Justby";
 import Navbar from "./Components/Navbar";
@@ -25,7 +26,14 @@ const App = () => {
   //   console.log("cart change");
   // }, [cart]);
 
+import "./App.css"
+import MainRoutes from "./Pages/MainRoutes"
+import Navbar from "./Components/Navbar"
+import Footer from "./Components/Footer"
+
+
   return (
+
     <React.Fragment>
       <Navbar setShow={setShow} size={cart.length} />
       {show ? (
@@ -38,3 +46,14 @@ const App = () => {
 };
 
 export default App;
+
+    <div className="App">
+      <Navbar />
+      <MainRoutes />
+      <Footer />
+    </div>
+  )
+}
+
+export default App
+

@@ -1,0 +1,15 @@
+.product-filter-container {
+  display: flex;
+  gap: 20px;
+  /* background-color: white; */
+}
+
+.filter-component {
+  width: 18%;
+  background-color: white;
+  border-right: 1px solid gray;
+}
+
+.product-list {
+  width: 85%;
+}
