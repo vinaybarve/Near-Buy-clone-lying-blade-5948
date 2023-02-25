@@ -13,7 +13,31 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 
+import { useState } from "react";
+
+
 export default function Login() {
+const [email, setEmail]=useState("");
+const [password, setPassword]=useState("");
+
+
+const handleSubmit=()=>{
+  const payload={
+     email, password
+  }
+  //console.log(payload)
+  fetch("http://localhost:8080/user/login",{
+    method:"POST",
+    body: JSON.stringify(payload),
+    headers:{
+      "Content-Type": "application/json"
+    }
+  }).then((res)=>res.json())
+  .then((res)=>console.log(res) )
+  .catch((err)=>console.log(err))
+}
+
+
   return (
     <Flex
       minH={"100vh"}
@@ -37,11 +61,11 @@ export default function Login() {
           <Stack spacing={4}>
             <FormControl id="email">
               <FormLabel>Email address</FormLabel>
-              <Input type="email" />
+              <Input type="email" value={email} onChange={(e)=>setEmail(e.target.value)} />
             </FormControl>
             <FormControl id="password">
               <FormLabel>Password</FormLabel>
-              <Input type="password" />
+              <Input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} />
             </FormControl>
             <Stack spacing={10}>
               <Stack
@@ -58,8 +82,14 @@ export default function Login() {
                 _hover={{
                   bg: "red.500",
                 }}
+
               >
                 Sign in
+
+                onClick={handleSubmit}
+              >
+                Proceed
+
               </Button>
             </Stack>
           </Stack>

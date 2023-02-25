@@ -13,7 +13,8 @@ const ProductItems = ({
 }) => {
   return (
     <Box
-      boxShadow="rgba(0, 0, 0, 0.4) 0px 1px 4px, rgba(0, 0, 0, 0.3) 0px 5px 10px -1px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset"
+      // boxShadow="rgba(0, 0, 0, 0.4) 0px 1px 4px, rgba(0, 0, 0, 0.3) 0px 5px 10px -1px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset"
+      boxShadow="rgba(0, 0, 0, 0.4) 0px 1px 2px, rgba(0, 0, 0, 0.3) 0px 2px 2px -1px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset"
       cursor={"pointer"}
     >
       <Box
