@@ -7,7 +7,6 @@ import Signup from "./Signup"
 import SingleProduct from "./SingleProduct"
 import Admin from "./Admin"
 import Dashboard from "../Pages/Dashboard"
-
 import AdminLogin from "./AdminLogin"
 
 import { Gift } from "../Components/Gift"
