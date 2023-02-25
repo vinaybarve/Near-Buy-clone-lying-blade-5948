@@ -4,6 +4,7 @@ import {
   GET_PRODUCTS_REQUEST,
   GET_PRODUCTS_SUCCESS,
 } from "./actionType";
+import BackendURL from "../../Backend"
 
 const getProductRequestAction = () => {
   return { type: GET_PRODUCTS_REQUEST };
@@ -21,7 +22,7 @@ export const getProducts = (param) => (dispatch) => {
   dispatch(getProductRequestAction());
 
   axios
-    .get("http://localhost:8080/restaurant/", param) //--------------------------API------------->
+    .get(`${BackendURL}/restaurant/`, param) //--------------------------API------------->
     .then((res) => {
       console.log(res);
       dispatch(getProductSuccessAction(res.data));
