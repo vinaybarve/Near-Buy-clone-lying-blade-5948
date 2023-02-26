@@ -108,20 +108,22 @@ export default function Navbar() {
         }}
         alignItems="center"
       >
-        <Image
-          marginRight={{
-            sm: "110px",
-            md: "60px",
-          }}
-          width={{
-            sm: "100px",
-            md: "100px",
-            lg: "20%",
-          }}
-          ml="200px"
-          h="70px"
-          src="https://www.nearbuy.com/static/images/nearbuy_red_with_subtitle.svg"
-        />
+        <Link to={"/"}>
+          <Image
+            marginRight={{
+              sm: "110px",
+              md: "60px",
+            }}
+            width={{
+              sm: "100px",
+              md: "100px",
+              lg: "20%",
+            }}
+            ml="200px"
+            h="70px"
+            src="https://www.nearbuy.com/static/images/nearbuy_red_with_subtitle.svg"
+          />
+        </Link>
         <Flex
           w={{
             sm: "100px",
