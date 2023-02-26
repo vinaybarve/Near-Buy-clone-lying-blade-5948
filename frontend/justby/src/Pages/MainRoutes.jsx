@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import EditProduct from "./EditProduct";
 import Login from "./Login";
 import Products from "./Products";
@@ -21,6 +21,7 @@ import AdminLogin from "./AdminLogin";
 
 import { Gift } from "../Components/Gift";
 import CartPage from "./CartPage";
+import Form from "./Payment Page/Form";
 
 export default function MainRoutes() {
   return (
@@ -45,8 +46,7 @@ export default function MainRoutes() {
       <Route path="/payment" element={<Form />} />
       <Route path="/admin" element={<Admin />} />
       <Route path="*" element={<h3>Page Not Found</h3>} />
-      <Route path="/Cartpage" element={<CartPage/>} />
-
+      <Route path="/Cartpage" element={<CartPage />} />
     </Routes>
-  )
+  );
 }
