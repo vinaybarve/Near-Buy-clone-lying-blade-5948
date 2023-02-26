@@ -24,13 +24,13 @@ import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { MdLocalShipping } from "react-icons/md";
 import { Link, useParams } from "react-router-dom";
 
-export default function SingleProduct() {
+export default function SingleGift() {
   const { id } = useParams();
   const [product, setProduct] = useState({});
   console.log(product);
 
   useEffect(() => {
-    axios.get(`${BackendURL}/restaurant/${id}`).then((res) => {
+    axios.get(`${BackendURL}/gift/${id}`).then((res) => {
       setProduct(res.data);
     });
   }, []);

@@ -22,6 +22,7 @@ import AdminLogin from "./AdminLogin";
 import { Gift } from "../Components/Gift";
 import CartPage from "./CartPage";
 import Form from "./Payment Page/Form";
+import SingleGift from "./SingleGift";
 
 export default function MainRoutes() {
   return (
@@ -38,6 +39,7 @@ export default function MainRoutes() {
       <Route path="/" element={<Dashboard />} />
       <Route path="/products" element={<Products />} />
       <Route path="/products/:id" element={<SingleProduct />} />
+      <Route path="/singlegift" element={<SingleGift />} />
       <Route path="/products/:id/edit" element={<EditProduct />} />
       <Route path="/gift" element={<Gift />} />
       <Route path="/login" element={<Login />} />

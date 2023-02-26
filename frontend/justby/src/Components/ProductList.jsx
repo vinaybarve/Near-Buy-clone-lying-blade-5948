@@ -30,7 +30,9 @@ export default function ProductList() {
     <div className={styles.container}>
       {products.length > 0 &&
         products.map((el) => {
-          return <ProductCard key={el._id} product={el} />;
+          if (el.active) {
+            return <ProductCard key={el._id} product={el} />;
+          }
         })}
     </div>
   );

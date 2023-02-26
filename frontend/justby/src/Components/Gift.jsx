@@ -9,26 +9,27 @@ import {
   Input,
   SimpleGrid,
   Text,
-} from "@chakra-ui/react"
-import React, { useEffect, useState } from "react"
+} from "@chakra-ui/react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Gift = () => {
-  const [data, setData] = useState([])
+  const [data, setData] = useState([]);
   const getdata = async () => {
     try {
-      let res = await fetch("http://localhost:8080/gift")
-      let data = await res.json()
-      setData(data)
+      let res = await fetch("http://localhost:8080/gift");
+      let data = await res.json();
+      setData(data);
     } catch (err) {
-      console.error(err)
+      console.error(err);
     }
-  }
+  };
 
   useEffect(() => {
-    getdata()
-  }, [])
+    getdata();
+  }, []);
 
-  console.log(data)
+  console.log(data);
   return (
     <Box bg={"#e1eaea"}>
       <Box
@@ -99,21 +100,23 @@ export const Gift = () => {
           <SimpleGrid columns={[1, 2, 3]} spacing="20px">
             {data.map((el) => (
               <Box bg={"white"} p="4">
-                <Image src={el.image} alt="image" />
-                <Heading size={"sm"} textAlign="left" py="2">
-                  {el.name}
-                </Heading>
-                <Text fontSize={"sm"} textAlign="left" color={"gray.800"}>
-                  Rs. {el.price}
-                </Text>
-                <Flex justifyContent={"space-between"} py="2">
-                  <Text fontSize={"sm"} color={"gray.500"}>
-                    {el.order}
+                <Link to={"/singlegift"}>
+                  <Image src={el.image} alt="image" />
+                  <Heading size={"sm"} textAlign="left" py="2">
+                    {el.name}
+                  </Heading>
+                  <Text fontSize={"sm"} textAlign="left" color={"gray.800"}>
+                    Rs. {el.price}
                   </Text>
-                  <Text fontSize={"sm"} color={"gray.800"}>
-                    Rating {el.rating}
-                  </Text>
-                </Flex>
+                  <Flex justifyContent={"space-between"} py="2">
+                    <Text fontSize={"sm"} color={"gray.500"}>
+                      {el.order}
+                    </Text>
+                    <Text fontSize={"sm"} color={"gray.800"}>
+                      Rating {el.rating}
+                    </Text>
+                  </Flex>
+                </Link>
                 <hr />
                 <Text
                   fontSize={"sm"}
@@ -129,5 +132,5 @@ export const Gift = () => {
         </Box>
       </Box>
     </Box>
-  )
-}
+  );
+};
