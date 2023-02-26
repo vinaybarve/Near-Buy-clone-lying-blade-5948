@@ -2,7 +2,7 @@ import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
 import React from "react"
 import { product6 } from "../products/products"
-import { Text } from "@chakra-ui/react"
+import { Box, Text } from "@chakra-ui/react"
 import Product4 from "../products/Product4"
 function Carousal5() {
   const responsive = {
@@ -23,11 +23,21 @@ function Carousal5() {
     },
   }
   return (
-    <div
+    <Box
       style={{
         height: "360px",
-        width: "80%",
-        marginLeft: "180px",
+      }}
+      h={{
+        sm: "50px",
+        lg: "360px",
+      }}
+      ml={{
+        sm: "120px",
+        lg: "180px",
+      }}
+      w={{
+        sm: "50%",
+        lg: "80%",
       }}
     >
       {" "}
@@ -38,11 +48,6 @@ function Carousal5() {
           md: "700px",
         }}
         fontWeight="bold"
-        display={{
-          sm: "none",
-          md: "flex",
-          lg: "flex",
-        }}
       >
         Popular Hangouts
       </Text>
@@ -58,7 +63,7 @@ function Carousal5() {
           )
         })}
       </Carousel>
-    </div>
+    </Box>
   )
 }
 

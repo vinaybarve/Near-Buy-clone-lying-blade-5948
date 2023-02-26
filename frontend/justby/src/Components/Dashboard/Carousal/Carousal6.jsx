@@ -2,7 +2,7 @@ import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
 import React from "react"
 import { product7 } from "../products/products"
-import { Text } from "@chakra-ui/react"
+import { Box, Text } from "@chakra-ui/react"
 import Product5 from "../products/Product5"
 function Carousal6() {
   const responsive = {
@@ -23,11 +23,17 @@ function Carousal6() {
     },
   }
   return (
-    <div
+    <Box
       style={{
         height: "360px",
-        width: "80%",
-        marginLeft: "180px",
+      }}
+      ml={{
+        sm: "120px",
+        lg: "180px",
+      }}
+      w={{
+        sm: "50%",
+        lg: "80%",
       }}
     >
       {" "}
@@ -58,7 +64,7 @@ function Carousal6() {
           )
         })}
       </Carousel>
-    </div>
+    </Box>
   )
 }
 
