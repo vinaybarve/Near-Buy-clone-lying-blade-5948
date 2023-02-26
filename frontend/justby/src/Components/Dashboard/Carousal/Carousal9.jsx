@@ -3,7 +3,6 @@ import "react-multi-carousel/lib/styles.css"
 import React from "react"
 import { product10 } from "../products/products"
 import { Text } from "@chakra-ui/react"
-import Product5 from "../products/Product5"
 import Product6 from "../products/Product6"
 function Carousal9() {
   const responsive = {

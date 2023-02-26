@@ -2,7 +2,7 @@ import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
 import React from "react"
 import Product1 from "../products/Product1"
-import { product1, product8 } from "../products/products"
+import { product8 } from "../products/products"
 function Carousal7() {
   const responsive = {
     desktop: {

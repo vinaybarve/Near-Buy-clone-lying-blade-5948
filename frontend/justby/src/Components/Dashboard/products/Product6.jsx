@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react"
+import { Box, Flex, Image, Text } from "@chakra-ui/react"
 import React from "react"
 
 function Product6({ img, text }) {

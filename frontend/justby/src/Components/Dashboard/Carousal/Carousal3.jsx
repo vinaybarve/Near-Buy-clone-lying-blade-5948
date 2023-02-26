@@ -1,7 +1,6 @@
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
 import React from "react"
-import Product1 from "../products/Product1"
 import { product3 } from "../products/products"
 import Product2 from "../products/Product2"
 import { Text } from "@chakra-ui/react"
