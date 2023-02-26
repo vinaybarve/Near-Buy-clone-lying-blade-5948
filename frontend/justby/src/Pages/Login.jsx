@@ -106,7 +106,7 @@ const handleSubmit=()=>{
                Sign in
 
               </Button>
-              <Link to="/signup">Create new account </Link>
+              <Link to="/signup"><Text color={"red.500"}> Create new account</Text> </Link>
             </Stack>
           </Stack>
         </Box>
