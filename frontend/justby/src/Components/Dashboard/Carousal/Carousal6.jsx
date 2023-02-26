@@ -14,7 +14,7 @@ function Carousal6() {
     tablet: {
       breakpoint: { max: 1024, min: 464 },
       items: 1,
-      slidesToSlide: 2,
+      slidesToSlide: 1,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -48,7 +48,14 @@ function Carousal6() {
       </Text>
       <Carousel responsive={responsive}>
         {product7.map((el) => {
-          return <Product5 img={el.img} text={el.text} price={el.price} />
+          return (
+            <Product5
+              key={Math.random()}
+              img={el.img}
+              text={el.text}
+              price={el.price}
+            />
+          )
         })}
       </Carousel>
     </div>

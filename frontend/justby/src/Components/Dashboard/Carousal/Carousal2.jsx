@@ -36,7 +36,7 @@ function Carousal2() {
         showDots
       >
         {product2.map((el) => {
-          return <Product1 img={el.img} />
+          return <Product1 key={Math.random()} img={el.img} />
         })}
       </Carousel>
     </div>

@@ -1,15 +1,15 @@
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
 import React from "react"
-import Product1 from "../products/Product1"
-import { product3 } from "../products/products"
-import Product2 from "../products/Product2"
-import { Text } from "@chakra-ui/react"
-function Carousal3() {
+import { product10, product11 } from "../products/products"
+import { Button, Text } from "@chakra-ui/react"
+import Product5 from "../products/Product5"
+import Product6 from "../products/Product6"
+function Carousal11() {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 7,
+      items: 6,
       slidesToSlide: 1,
     },
     tablet: {
@@ -26,7 +26,7 @@ function Carousal3() {
   return (
     <div
       style={{
-        height: "120px",
+        height: "330px",
         width: "80%",
         marginLeft: "180px",
       }}
@@ -45,15 +45,24 @@ function Carousal3() {
           lg: "flex",
         }}
       >
-        Top Brands
+        Relaxing Massages
       </Text>
       <Carousel responsive={responsive}>
-        {product3.map((el) => {
-          return <Product2 key={Math.random()} img={el.img} />
+        {product11.map((el) => {
+          return <Product6 key={Math.random()} img={el.img} text={el.text} />
         })}
       </Carousel>
+      <Button
+        display={{
+          sm: "none",
+          lg: "inline-block",
+        }}
+        mt="60px"
+      >
+        View All Offers
+      </Button>
     </div>
   )
 }
 
-export default Carousal3
+export default Carousal11

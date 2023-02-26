@@ -114,11 +114,56 @@ export const product9 = [
   { img: "https://img4.nbstatic.in/tr:w-350/6130d7931e2731000b3c2663.jpg" },
 ]
 
-const product10 = [
-  { img: "", text: "Haircut" },
-  { img: "", text: "Hair Spa" },
-  { img: "", text: "Waxing" },
-  { img: "", text: "Facial" },
-  { img: "", text: "Hair Treatment" },
-  { img: "", text: "All Salon Offers" },
+export const product10 = [
+  {
+    img: "https://img4.nbstatic.in/tr:w-350/60fe73dd1e2731000b9be402.jpg",
+    text: "Haircut",
+  },
+  {
+    img: "https://img4.nbstatic.in/tr:w-350/6130d9221e2731000b3c2664.jpg",
+    text: "Hair Spa",
+  },
+  {
+    img: "https://img4.nbstatic.in/tr:w-350/61165b9240e9df000b66f8d4.jpg",
+    text: "Waxing",
+  },
+  {
+    img: "https://img4.nbstatic.in/tr:w-350/60fe742d40e9df000b0f5c3b.jpg",
+    text: "Facial",
+  },
+  {
+    img: "https://img4.nbstatic.in/tr:w-350/60fe740940e9df000b0f5c3a.jpg",
+    text: "Hair Treatment",
+  },
+  {
+    img: "https://img4.nbstatic.in/tr:w-350/60fe738e1e2731000b9be400.jpg",
+    text: "All Salon Offers",
+  },
+]
+
+export const product11 = [
+  {
+    img: "https://img4.nbstatic.in/tr:w-350/60fe592d1e2731000b9be392.jpg",
+    text: "Aromatherapy",
+  },
+  {
+    img: "https://img4.nbstatic.in/tr:w-350/60fe594a1e2731000b9be395.jpg",
+    text: "Balinese",
+  },
+  {
+    img: "https://img4.nbstatic.in/tr:w-350/60fe59751e2731000b9be396.jpg",
+    text: "Ayurvedic",
+  },
+  {
+    img: "https://img4.nbstatic.in/tr:w-350/60fe598d40e9df000b0f5bcb.jpg",
+    text: "Thai",
+  },
+  {
+    img: "https://img4.nbstatic.in/tr:w-350/60fe59af1e2731000b9be397.jpg",
+    text: "Swedish",
+  },
+  {
+    img: "https://img4.nbstatic.in/tr:w-350/60fe59ce1e2731000b9be399.jpg",
+    text: "Deep Tissue",
+  },
 ]
