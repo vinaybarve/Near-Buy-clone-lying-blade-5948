@@ -8,6 +8,7 @@ import {
   Icon,
   chakra,
   Tooltip,
+  SimpleGrid,
 } from "@chakra-ui/react";
 import { FiShoppingCart } from "react-icons/fi";
 import { BsStarFill, BsStarHalf } from "react-icons/bs";
@@ -24,6 +25,7 @@ function ProductCard({ product }) {
       justifyContent="center"
     >
       <Box
+        display={product.active ? "block" : "none"}
         bg={useColorModeValue("white", "gray.800")}
         maxW="300px"
         h={"350px"}
@@ -117,7 +119,7 @@ function ProductCard({ product }) {
         </Box>
       </Box>
     </Flex>
-  )
+  );
 }
 
-export default ProductCard
+export default ProductCard;
