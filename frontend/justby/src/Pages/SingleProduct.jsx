@@ -149,7 +149,7 @@ export default function SingleProduct() {
               </List>
             </Box>
           </Stack>
-          <Link to={"/payment"}>
+          <Link to={"/checkout"}>
             <Button
               rounded={"none"}
               w={"full"}
@@ -164,7 +164,7 @@ export default function SingleProduct() {
                 boxShadow: "lg",
               }}
             >
-              Add to cart
+              Place Order
             </Button>
           </Link>
 
