@@ -2,7 +2,7 @@ import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
 import React from "react"
 import { product10 } from "../products/products"
-import { Text } from "@chakra-ui/react"
+import { Box, Text } from "@chakra-ui/react"
 import Product6 from "../products/Product6"
 function Carousal9() {
   const responsive = {
@@ -23,11 +23,17 @@ function Carousal9() {
     },
   }
   return (
-    <div
+    <Box
       style={{
         height: "200px",
-        width: "80%",
-        marginLeft: "180px",
+      }}
+      ml={{
+        sm: "120px",
+        lg: "180px",
+      }}
+      w={{
+        sm: "50%",
+        lg: "80%",
       }}
     >
       {" "}
@@ -51,7 +57,7 @@ function Carousal9() {
           return <Product6 key={Math.random()} img={el.img} text={el.text} />
         })}
       </Carousel>
-    </div>
+    </Box>
   )
 }
 
