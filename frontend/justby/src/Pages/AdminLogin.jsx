@@ -11,24 +11,25 @@ import {
     Heading,
     Text,
     useColorModeValue,
-    Toast,
+    useToast 
   } from "@chakra-ui/react";
   import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 //   import { useHistory } from "react-router-dom";
+import BackendURL from "../Backend";
 
   export default function AdminLogin() {
   const [email, setEmail]=useState("");
   const [password, setPassword]=useState("");
   let navigate = useNavigate(); 
-  
+  const toast = useToast()
   
   const handleSubmit=()=>{
     const payload={
        email, password
     }
     //console.log(payload)
-    fetch("http://localhost:8080/admin/login",{
+    fetch(`${BackendURL}/admin/login`,{
       method:"POST",
       body: JSON.stringify(payload),
       headers:{
@@ -36,20 +37,31 @@ import { useNavigate } from "react-router-dom";
       }
     }).then((res)=>res.json())
     .then((res)=>{
-        // console.log(res.msg) 
-        Toast({
+        // console.log(res) 
+        if(res.token){
+          // res.msg === "login successfull"
+          toast({
             title: "Logged in Successfully",
             status: "success",
             duration: 3000,
             isClosable: true,
           });
-          navigate(`/admin`)
+          navigate(`/admin`);
+        }else if(!res.token){
+          toast({
+            title: "Wrong Credentials",
+            status: "error",
+            duration: 3000,
+            isClosable: true,
+          });
+        }
+          
     })
     .catch((err)=>{
-        // console.log(err.msg);
-        Toast({
+        console.log(err.msg);
+        toast({
             title: "Invalid Request",
-            status: "Error",
+            status: "error",
             duration: 3000,
             isClosable: true,
           });
