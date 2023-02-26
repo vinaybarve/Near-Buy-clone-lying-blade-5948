@@ -12,32 +12,43 @@ import {
     Heading,
     Text,
     useColorModeValue,
+    useToast,
   } from '@chakra-ui/react';
-  import { Link } from 'react-router-dom';
+  import { Link, useNavigate } from 'react-router-dom';
   import { useState } from 'react';
   import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
-  
+  import BackendURL from "../../src/Backend"
+
   export default function Signup() {
     const [showPassword, setShowPassword] = useState(false);
     const [name, setName]=useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [city, setCity] = useState("")
+    const navigate=useNavigate()
+    const toast = useToast()
 
     const handleSubmit=()=>{
       const payload={
         name, email, password, city
       }
       //console.log(payload)
-      fetch("http://localhost:8080/user/register",{
+      fetch(`${BackendURL}/user/register`,{
         method:"POST",
         body: JSON.stringify(payload),
         headers:{
           "Content-Type": "application/json"
         }
       }).then((res)=>res.json())
-      .then((res)=>{alert(res.msg);
-         window.location.href=res.url})
+      .then((res)=>{toast({
+        title: "Signup successfull",
+        status: "success",
+        duration: 3000,
+        isClosable: true,
+      });
+      console.log(res)
+        navigate("/login")
+         })
       .catch((err)=>alert(err))
     }
 
