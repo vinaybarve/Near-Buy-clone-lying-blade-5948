@@ -125,7 +125,7 @@ export default function Navbar() {
         <Flex
           w={{
             sm: "100px",
-            lg: "79%",
+            lg: "74%",
           }}
         >
           <InputGroup>
