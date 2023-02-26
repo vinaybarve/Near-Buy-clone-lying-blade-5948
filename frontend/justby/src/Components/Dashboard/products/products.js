@@ -46,3 +46,79 @@ export const product4 = [
   { img: "https://img4.nbstatic.in/tr:w-2800/627b4e2ab3c621000b5f5e78.jpg" },
   { img: "https://img4.nbstatic.in/tr:w-2800/627b4e163b031b000b774d60.jpg" },
 ]
+// ////////////
+
+export const product6 = [
+  {
+    img: "https://img4.nbstatic.in/tr:w-350/58502be5dc0e82000d1800c6.jpg",
+    text: "Connaught Place",
+    price: " 99",
+  },
+  {
+    img: "https://img4.nbstatic.in/tr:w-350/6385d1e822156b000c42f6de.jpg",
+    text: "Club Road",
+    price: "159",
+  },
+  {
+    img: "https://img4.nbstatic.in/tr:w-350/58d3616746e0fb000dc3ad7e.jpg",
+    text: "Aerocity",
+    price: "599",
+  },
+  {
+    img: "https://img4.nbstatic.in/tr:w-350/5d8dff57d60180000d4965d6.jpg",
+    text: "Rajouri Garden Main Market",
+    price: "299",
+  },
+  {
+    img: "https://img4.nbstatic.in/tr:w-350/584ffd09c9e77c000d174e6f.jpg",
+    text: "Hauz Khas Village",
+    price: "499",
+  },
+  {
+    img: "https://img4.nbstatic.in/tr:w-350/6385c23a22b317000b621160.jpg",
+    text: "Maharaja Surahmal Road",
+    price: "750",
+  },
+  {
+    img: "https://img4.nbstatic.in/tr:w-350/6385abff22156b000c42f5fb.jpg",
+    text: "Sarojni",
+    price: "334",
+  },
+]
+
+export const product7 = [
+  { img: "https://img4.nbstatic.in/tr:w-350/63bea6188db992000b7a15f1.jpg" },
+  { img: "https://img4.nbstatic.in/tr:w-350/63d900238db992000b625214.jpg" },
+  { img: "https://img4.nbstatic.in/tr:w-350/63c7a48822b317000b61a5f0.jpg" },
+  { img: "https://img4.nbstatic.in/tr:w-350/636ced9622156b000b884ce7.jpg" },
+  { img: "https://img4.nbstatic.in/tr:w-350/636ced9e22b317000b638d9e.jpg" },
+  { img: "https://img4.nbstatic.in/tr:w-350/63ce452422b317000b401bd4.jpg" },
+  { img: "https://img4.nbstatic.in/tr:w-350/63e3261c22b317000bc820cf.jpg" },
+  { img: "https://img4.nbstatic.in/tr:w-350/63e325a38db992000bb57b3a.jpg" },
+  { img: "https://img4.nbstatic.in/tr:w-350/63e325d08db992000bb57b3d.jpg" },
+  { img: "https://img4.nbstatic.in/tr:w-350/63e323f022b317000bc820c7.jpg" },
+]
+
+export const product8 = [
+  { img: "https://img4.nbstatic.in/tr:w-2800/63bfe2008db992000b7a18b9.jpg" },
+  { img: "https://img4.nbstatic.in/tr:w-2800/63bfe20422b317000b618aaa.jpg" },
+  { img: "https://img4.nbstatic.in/tr:w-2800/63bfe1fc22b317000b618aa9.jpg" },
+]
+
+export const product9 = [
+  { img: "https://img4.nbstatic.in/tr:w-350/61fbad613b031b000bd5c0de.jpeg" },
+  { img: "https://img4.nbstatic.in/tr:w-350/61fbad7a3b031b000bd5c0df.jpeg" },
+  { img: "https://img4.nbstatic.in/tr:w-350/61fbad4d3b031b000bd5c0dd.jpeg" },
+  { img: "https://img4.nbstatic.in/tr:w-350/61fbad0d6f487a000bf5658c.jpeg" },
+  { img: "https://img4.nbstatic.in/tr:w-350/61fbacf43b031b000bd5c0db.jpeg" },
+  { img: "https://img4.nbstatic.in/tr:w-350/6130d7931e2731000b3c2663.jpg" },
+]
+
+const product10 = [
+  { img: "", text: "Haircut" },
+  { img: "", text: "Hair Spa" },
+  { img: "", text: "Waxing" },
+  { img: "", text: "Facial" },
+  { img: "", text: "Hair Treatment" },
+  { img: "", text: "All Salon Offers" },
+]
