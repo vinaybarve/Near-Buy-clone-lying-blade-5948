@@ -1,9 +1,9 @@
-import React from "react"
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
+import React from "react"
 import Product1 from "../products/Product1"
-import { product2 } from "../products/products"
-function Carousal2() {
+import { product8 } from "../products/products"
+function Carousal7() {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -21,6 +21,7 @@ function Carousal2() {
       slidesToSlide: 1,
     },
   }
+
   return (
     <div
       style={{
@@ -28,18 +29,13 @@ function Carousal2() {
         backgroundColor: "#F1F1F1",
       }}
     >
-      <Carousel
-        responsive={responsive}
-        autoPlay={true}
-        autoPlaySpeed={2000}
-        rewind={true}
-        showDots
-      >
-        {product2.map((el) => {
+      <Carousel responsive={responsive}>
+        {product8.map((el) => {
           return <Product1 key={Math.random()} img={el.img} />
         })}
       </Carousel>
     </div>
   )
 }
-export default Carousal2
+
+export default Carousal7

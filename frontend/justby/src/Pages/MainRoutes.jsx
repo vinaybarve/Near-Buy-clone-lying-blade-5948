@@ -8,24 +8,8 @@ import SingleProduct from "./SingleProduct"
 import Admin from "./Admin"
 import Dashboard from "../Pages/Dashboard"
 import AdminLogin from "./AdminLogin"
-
-
-// import { Route, Routes } from "react-router-dom";
-// import EditProduct from "./EditProduct";
-// import Login from "./Login";
-// import Products from "./Products";
-// import Signup from "./Signup";
-// import SingleProduct from "./SingleProduct";
-import Dashboard from "../Pages/Dashboard";
-// import Admin from "./Admin";
-
-import AdminLogin from "./AdminLogin";
-
-import { Gift } from "../Components/Gift";
-import Form from "./Payment Page/Form";
-
 import { Gift } from "../Components/Gift"
-
+import Form from "./Payment Page/Form"
 
 export default function MainRoutes() {
   return (
