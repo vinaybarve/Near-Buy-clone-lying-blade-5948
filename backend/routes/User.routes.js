@@ -41,14 +41,14 @@ userRouter.post("/register" , async(req, res)=>{
                 res.send({"msg":"Something went wrong","error":err.message})
             }else{
                 const uservalidate=await UserModel.find({"email":email})
-                console.log(uservalidate.length>0)
+                console.log(uservalidate.length)
                 if(uservalidate.length>0){
                     res.send({"msg":"user already exist", "url":"/signup"})
                 }else{
 
                     const user=new UserModel({name, email, city, password:hash})
                     await user.save()
-                    res.send({"msg":"user register", "url":"http://localhost:3000/login"});
+                    res.send({"msg":"user register", "url":""});
                 }
             }
         });

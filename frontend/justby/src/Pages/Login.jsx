@@ -6,34 +6,52 @@ import {
   Input,
   Checkbox,
   Stack,
-  Link,
   Button,
   Heading,
   Text,
   useColorModeValue,
+  useToast,
 } from "@chakra-ui/react";
 
 import { useState } from "react";
-
-
+import { useNavigate } from "react-router-dom";
+import BackendURL from "../../src/Backend"
+import {Link} from "react-router-dom"
 export default function Login() {
 const [email, setEmail]=useState("");
 const [password, setPassword]=useState("");
-
-
+const navigate=useNavigate()
+const toast = useToast()
 const handleSubmit=()=>{
   const payload={
      email, password
   }
   //console.log(payload)
-  fetch("http://localhost:8080/user/login",{
+  fetch(`${BackendURL}/user/login`,{
     method:"POST",
     body: JSON.stringify(payload),
     headers:{
       "Content-Type": "application/json"
     }
   }).then((res)=>res.json())
-  .then((res)=>console.log(res) )
+  .then((res)=>{
+    if(res.token){
+      // res.msg === "login successfull"
+      toast({
+        title: "Logged in Successfully",
+        status: "success",
+        duration: 3000,
+        isClosable: true,
+      });
+      navigate(`/products`);
+    }else if(!res.token){
+      toast({
+        title: "Wrong Credentials",
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
+    }} )
   .catch((err)=>console.log(err))
 }
 
@@ -83,14 +101,12 @@ const handleSubmit=()=>{
                   bg: "red.500",
                 }}
 
-              >
-                Sign in
-
                 onClick={handleSubmit}
               >
-                Proceed
+               Sign in
 
               </Button>
+              <Link to="/signup">Create new account </Link>
             </Stack>
           </Stack>
         </Box>
