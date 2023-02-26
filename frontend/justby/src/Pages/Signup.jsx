@@ -129,8 +129,8 @@ import {
                 </Button>
               </Stack>
               <Stack pt={6}>
-                <Text align={'center'}>
-                  Already a user? <Link color={'red.400'} to="/login" >Login</Link>
+                <Text align={'center'} color="red.500"  >
+                  Already a user? <Link to="/login" >Login</Link>
                 </Text>
               </Stack>
             </Stack>
