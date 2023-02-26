@@ -1,62 +1,6 @@
 import React, { ReactNode, useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
-// import {
-//   Checkbox,
-//   // CheckboxGroup,
-//   Heading,
-//   Radio,
-//   RadioGroup,
-//   Stack,
-// } from "@chakra-ui/react";
-// import {
-//   // IconButton,
-//   Box,
-//   // CloseButton,
-//   Flex,
-//   // Icon,
-//   useColorModeValue,
-//   // Link,
-//   // Drawer,
-//   // DrawerContent,
-//   Text,
-//   // useDisclosure,
-//   // BoxProps,
-//   // FlexProps,
-// } from "@chakra-ui/react";
 
-// // import {
-// //   FiHome,
-// //   FiTrendingUp,
-// //   FiCompass,
-// //   FiStar,
-// //   FiSettings,
-// //   FiMenu,
-// // } from "react-icons/fi";
-// // import { IconType } from "react-icons";
-// // import { ReactText } from "react";
-
-// export default function Sidebar({ children }) {
-
-//   return (
-//     <Box minH="100vh" bg={useColorModeValue("white", "white")}>
-//       <Box
-//         bg={useColorModeValue("white", "gray.900")}
-//         borderRight="1px"
-//         borderRightColor={useColorModeValue("gray.200", "gray.700")}
-//         w={{ base: "full", md: 60 }}
-//         pos="fixed"
-//         h="full"
-//       >
-//
-//
-//       </Box>
-//       {/* mobilenav */}
-//       <Box ml={{ base: 0, md: 60 }} p="4">
-//         {children}
-//       </Box>
-//     </Box>
-//   );
-// }
 import {
   Box,
   Checkbox,
