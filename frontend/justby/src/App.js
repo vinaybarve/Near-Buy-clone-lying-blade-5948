@@ -13,12 +13,7 @@ const App = () => {
       <MainRoutes />
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-// export default App;
-
-//   )
-// }
-
-export default App;
+export default App

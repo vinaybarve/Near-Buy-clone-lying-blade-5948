@@ -10,7 +10,8 @@ const Just = ({ handleClick }) => {
         <Cards key={item.id} item={item} handleClick={handleClick} />
       ))}
     </section>
-  );
-};
+  )
+}
 
 export default Just;
+
