@@ -40,14 +40,25 @@ import {
           "Content-Type": "application/json"
         }
       }).then((res)=>res.json())
-      .then((res)=>{toast({
-        title: "Signup successfull",
-        status: "success",
-        duration: 3000,
-        isClosable: true,
-      });
-      console.log(res)
-        navigate("/login")
+      .then((res)=>{ 
+        if(res.msg=="user already exist"){
+          toast({
+            title:"user already exist",
+            status: "error",
+            duration: 3000,
+            isClosable: true,
+          });
+        }else{
+          toast({
+            title: "Signup successfull",
+            status: "success",
+            duration: 3000,
+            isClosable: true,
+          });
+          console.log(res)
+          navigate("/login")
+        }
+      
          })
       .catch((err)=>alert(err))
     }
