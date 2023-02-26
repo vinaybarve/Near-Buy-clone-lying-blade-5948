@@ -1,3 +1,4 @@
+
 import {
   Box,
   Checkbox,
@@ -24,6 +25,29 @@ export const Gift = () => {
         justifyContent={"space-between"}
         pt={"6"}
       >
+import { Box, Checkbox, Flex, FormControl, FormLabel, Heading, Image, Input, SimpleGrid, Text } from '@chakra-ui/react'
+import React, { useEffect, useState } from 'react'
+
+export const Gift = () => {
+    const [data, setData]=useState([])
+    const getdata=async()=>{
+      try{
+        let res=await fetch("http://localhost:8080/gift")
+        let data=await res.json()
+        setData(data)
+      }catch(err){
+        console.error(err)
+      }
+    }
+
+    useEffect(()=>{
+      getdata()
+    },[])
+
+    console.log(data)
+  return (
+    <Box bg={"#e1eaea"}>
+    <Box display={"flex"} w="80%" m="auto" gap="20px" justifyContent={"space-between"} py={"8"}>
         <Box w="30%">
           <Box bg={"white"} rounded="base" textAlign={"left"} p="6">
             <Heading size="md">Win Rs 500 instant off code</Heading>
@@ -79,7 +103,27 @@ export const Gift = () => {
           </Box>
         </Box>
         <Box>
+
           <SimpleGrid columns={[1, 2, 3]} spacing="20px"></SimpleGrid>
+
+        <SimpleGrid columns={[1, 2, 3]} spacing='20px'>
+        {
+              data.map((el)=>(
+                <Box bg={"white"} p="4">
+                  <Image src={el.image} alt="image" />
+                  <Heading size={"sm"} textAlign="left" py="2">{el.name}</Heading>
+                  <Text fontSize={"sm"} textAlign="left" color={"gray.800"}>Rs. {el.price}</Text>
+                  <Flex justifyContent={"space-between"} py="2">
+                    <Text fontSize={"sm"} color={"gray.500"}>{el.order}</Text>
+                    <Text fontSize={"sm"} color={"gray.800"}>Rating {el.rating}</Text>
+                  </Flex>
+                  <hr />
+                    <Text fontSize={"sm"} color={"gray.500"}  textAlign="left" pt="6">{el.phoneno} Bought</Text>
+                </Box>
+              ))
+            }
+        </SimpleGrid>
+
         </Box>
       </Box>
     </Box>
