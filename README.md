@@ -25,10 +25,10 @@ Deployed Link-https:https://unrivaled-dolphin-8cc168.netlify.app/
 <br>
 <hr>
 
-HomePage-<img src="https://i.ibb.co/jRxb9dc/Screenshot-39.png" alt="homepage" width="100%" height="500">
-Restuarant Deals-<img src="https://i.ibb.co/Pr0VnBV/Screenshot-33.png" alt="restuarant page" width="100%" height="500">
-Gift page Page-<img src="https://i.ibb.co/tDLyDNC/Screenshot-37.png" alt="gift page" width="100%" height="500">
-CartPage-<img src="https://i.ibb.co/J219rQ8/Screenshot-38.png" alt="cartPage" width="100%" height="500">
-Admin Page-<img src="https://i.ibb.co/M91T9XV/Screenshot-36.png" alt="admin page" width="100%" height="500">
+HomePage-<img src="https://i.ibb.co/jRxb9dc/Screenshot-39.png" alt="homepage" width="80%" height="500">
+Restuarant Deals-<img src="https://i.ibb.co/Pr0VnBV/Screenshot-33.png" alt="restuarant page" width="80%" height="500">
+Gift page Page-<img src="https://i.ibb.co/tDLyDNC/Screenshot-37.png" alt="gift page" width="80%" height="500">
+CartPage-<img src="https://i.ibb.co/J219rQ8/Screenshot-38.png" alt="cartPage" width="80%" height="500">
+Admin Page-<img src="https://i.ibb.co/M91T9XV/Screenshot-36.png" alt="admin page" width="80%" height="500">
 
 
