@@ -6,7 +6,7 @@ A group project that is made during the time span of 5 days.
 <li><a href="https://www.linkedin.com/in/rohan-gajare">Rohan</a></li>
 <li><a href="https://www.linkedin.com/in/iamitpal/">Amit Pal</a></li>
 <li><a href="https://www.linkedin.com/in/rashmi-gautam16/">Rashmi</a></li>
-<li><a href="https://www.w3schools.com">Mohtshim</a></li>
+<li><a href="www.linkedin.com/in/mohtashim-mir">Mohtashim</a></li>
 </ul>
 About Project- nearbuy.com (Nearbuy India Private Limited) is India’s first hyper-local online platform that enables customers and local merchants to discover and engage with each other. We at nearbuy.com, work hard to bring your world, closer to you. Whether it’s fine dining, relaxing at the top spas, or just discovering your city intimately, nearbuy.com makes it happen for you.
 
