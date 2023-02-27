@@ -43,7 +43,7 @@ const handleSubmit=()=>{
         duration: 3000,
         isClosable: true,
       });
-      navigate(`/products`);
+      navigate(`/gift`);
     }else if(!res.token){
       toast({
         title: "Wrong Credentials",

@@ -14,19 +14,12 @@ import {
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-
-} from "@chakra-ui/react"
-import React, { useEffect, useState } from "react"
 import BackendURL from "../../src/Backend"
 
 export const Gift = () => {
   const [data, setData] = useState([]);
   const getdata = async () => {
     try {
-
-      let res = await fetch("http://localhost:8080/gift");
-      let data = await res.json();
-      setData(data);
 
       let res = await fetch(`${BackendURL}/gift`)
       let data = await res.json()
