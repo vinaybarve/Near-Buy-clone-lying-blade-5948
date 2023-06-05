@@ -21,7 +21,7 @@ To discover, purchase and share exciting experiences around you, wherever you ar
  <b> Backent (Tech-Stack)</b>:- MongoDB | Mongoose | MongoDB Atlas | Node JS 
 <br>
 <hr>
-Deployed Link-https:https://unrivaled-dolphin-8cc168.netlify.app/
+Deployed Link-[https://just-buy-phi.vercel.app/](https://just-buy-phi.vercel.app/)
 <br>
 <hr>
 
