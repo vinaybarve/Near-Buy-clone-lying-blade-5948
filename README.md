@@ -27,7 +27,8 @@ Deployed Link-https://just-buy-phi.vercel.app/
 
 HomePage-<img src="https://i.ibb.co/jRxb9dc/Screenshot-39.png" alt="homepage" width="100%" height="500">
 Restuarant Deals-<img src="https://i.ibb.co/Pr0VnBV/Screenshot-33.png" alt="restuarant page" width="100%" height="500">
-Gift page Page-<img src="https://i.ibb.co/tDLyDNC/Screenshot-37.png" alt="gift page" width="100%" height="500">
+Gift page Page-![Gift page](https://github.com/vinaybarve/Near-Buy-clone-lying-blade-5948/assets/112626910/d21a8899-a513-4484-9d1b-8bf097ead86b)
+
 CartPage-<img src="https://i.ibb.co/J219rQ8/Screenshot-38.png" alt="cartPage" width="100%" height="500">
 Admin Page-<img src="https://i.ibb.co/M91T9XV/Screenshot-36.png" alt="admin page" width="100%" height="500">
 
